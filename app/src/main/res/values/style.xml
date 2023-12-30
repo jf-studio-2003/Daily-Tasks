@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 半透明 沉浸式主题样式 -->
+    <style name="TranslucentTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--半透明状态栏-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <!--半透明导航栏-->
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!-- Android 5.0+，设置状态栏全透明透明 -->
+        <item name="android:statusBarColor">#F4F4F4</item>
+        <!-- 开启状态栏为亮色风格，则文字为暗色 -->
+        <item name="android:windowLightStatusBar">true</item>
+
+    </style>
+
+</resources>
