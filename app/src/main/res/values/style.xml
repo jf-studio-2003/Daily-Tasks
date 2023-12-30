@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<资源>
-  
-    <风格名字="半透明主题1 " 父母="主题AppCompat。Light.NoActionBar " >
+<resources>
+   
+    <style name="TranslucentTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+      
+        <item name="android:windowTranslucentStatus">false</item>
        
-        <项目名字=" Android:窗口半透明状态">错误的</项目>
-       
-        <项目名字= " Android:windows半透明导航">错误的</项目>
+        <item name="android:windowTranslucentNavigation">false</item>
 
        
-        <项目名字="安卓：状态栏颜色" > #F4F4F4</项目>
+        <item name="android:statusBarColor">#F4F4F4</item>
        
-        <项目名字=" android:windowLightStatusBar " >真实的</项目>
+        <item name="android:windowLightStatusBar">true</item>
 
-    </风格>
+    </style>
 
-</资源>
+</resources>
