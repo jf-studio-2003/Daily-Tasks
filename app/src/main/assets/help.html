@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/><script src="./jquery.min.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="./jsku.js"></script>
+<script language="JavaScript" type="text/javascript" src="./yin_biao_ku.js"></script>
+<script language="JavaScript" type="text/javascript" src="./wen_zhang_ku.js"></script>
+<title>我的</title>
+<link href="./nh.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body {
+	background-color: #F4F4F4;
+}
+-->
+</style>
+</head>
+
+<body>
+<div class="web">
+<div class="nei_rong">
+
+<div class="box_title" id="box_title_html">
+  <div id="title_html" class="css_title">帮助中心</div>
+ </div>
+ 
+ 
+ 
+ <div class="list_help" id="title_list_html"></div>
+ 
+ 
+</div> <!--nei_rong-->
+
+<div id="tabbar">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="an_niu">
+    <tr>
+      <td nowrap="nowrap"><a href="./index2.html">首页</a></td>
+      <td nowrap="nowrap"><a href="./review.html">练习</a></td>
+      <td nowrap="nowrap"><a href="./help.html"><div class="css_buttonr_bar">帮助</div></a></td>
+      <td nowrap="nowrap"><a href="./about.html">我的</a></td>
+    </tr>
+  </table>
+</div></div>
+<script type="text/javascript">
+
+     var list_title="";	// 声明变量
+	 
+     for (var i = 0; i <wen_zhang.length; i++) {  //数组获取列表开始-----------------
+list_title +="<div class=box_link onClick=javascript:window.location.href='article.html?wz="+i+"'><div class=item6><span class=item1><img src=icon.png alt=a width=15 height=15 align=absmiddle></span> &nbsp;"+wen_zhang[i].标题+"</div><div class=item7><img src=jiantou2.png align=top></div><div class=item6_2></div></div>";
+
+}; //数组获取列表结束---------------
+
+	xs("title_list_html").innerHTML = list_title //将列表显示到HTML里。
+	
+	$(document).ready(function(){ //下滑弹出动画
+	$("#box_title_html").slideDown("slow");});
+
+</script>
+</body>
+</html>

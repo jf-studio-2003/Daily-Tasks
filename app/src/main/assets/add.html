@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+<script src="./jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./jsku.js"></script>
+<title>添加打卡</title>
+<link href="./nh.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+body {
+	background-color: #F4F4F4;
+}
+-->
+</style>
+</head>
+
+<body>
+
+
+
+
+<div class="web">
+<div class="nei_rong">
+
+<!--卡片开始-->
+   <div class="title_box">添加打卡</div>
+
+<div id="box_title_html" class="yin_cang"><form action="" name="myform"><div class="box_input">
+  <input id="ming_cheng_form" onKeyPress="keydown()" class="css_input"placeholder="输入打卡任务名称：">
+  <input class="yin_cang">
+</div>
+</div></form>
+
+
+<div class="box_buttonr" onClick="tj()"><div class="css_buttonr" id="buttonr_html">确定</div>
+</div>
+<!--卡片结束-->
+
+
+
+
+</div>
+
+
+<!--弹窗开始-->
+<div id="yin_ying">
+<div id="tan_chuang"><div class="tan_chuang_title">添加成功</div>
+      <div id="tc_nr_id" class="tan_chuang_nei_rong"></div><div class="guan_bi" onClick="add_html()">确定</div>
+</div></div>
+<!--弹窗结束-->
+
+<div id="tabbar">
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" class="an_niu">
+      <tr>
+        <td nowrap="nowrap" onClick="home_html()">
+         <img class="icon" src="images/home_off.png" alt="首页">
+		  <div class="css_buttonr_bar">首页</div>
+          </td>
+        <td nowrap="nowrap" onClick="del_html()">
+                   <img class="icon" src="images/del_off.png" alt="删除">
+<div class="css_buttonr_bar">删除</div>
+          </td>
+        <td nowrap="nowrap" onClick="add_html()">
+				                   <img class="icon" src="images/add.png" alt="添加">
+
+          <div class="css_buttonr_bar" style="color:#FF9900">添加</div>
+          </td>
+        <td nowrap="nowrap" onClick="history_html()">
+		                   <img class="icon" src="images/history_off.png" alt="记录">
+          <div class="css_buttonr_bar">记录</div>
+          </td>
+        <td nowrap="nowrap" onClick="about_html()">		                  
+		 <img class="icon" src="images/about_off.png" alt="我的">
+
+          <div class="css_buttonr_bar"> 我的</div>
+          </td>
+      </tr>
+    </table>
+       </div></div>
+<script type="text/javascript">
+
+
+
+//下滑弹出动画开始
+	$(document).ready(function(){
+	$("#box_title_html").slideDown("slow");});
+//下滑弹出动画结束
+
+
+//函数开始添加 tian jia()
+    function tj(){
+//变量 
+var   ming_cheng_bl = "",
+	  zhuang_tai_bl = "35",
+	  
+// 获取输入框打卡任务名称
+	 ming_cheng_bl = idv("ming_cheng_form");
+
+
+
+//将任务标题写入到本地浏览器存储里
+
+localStorage.setItem(ming_cheng_bl, zhuang_tai_bl);
+
+ // 弹窗内容
+	
+var tc_nr = ming_cheng_bl;
+
+ // 将弹窗内容显示到ID为 TC_NR_ID的元素里
+
+	document.getElementById('tc_nr_id').innerHTML = tc_nr
+	
+	
+	 		//阴影透明背景
+  var bgObj=document.getElementById("yin_ying");
+  bgObj.style.width = document.body.offsetWidth + "px";
+  bgObj.style.height = screen.height + "px";  
+
+
+	
+	
+//	弹出添加成功按钮
+	$(document).ready(function(){
+    $("#yin_ying").slideDown("slow");
+});
+
+//弹窗结束
+
+
+}; //函数结束添加
+
+//按回车执行函数tj
+function keydown() 
+{
+//如果按了回车键
+  if (event.keyCode == 13)
+  {
+    tj();
+	//alert("回车");
+  };
+};
+//结束按回车执行函数tj
+
+
+
+
+	</script>
+</body>
+</html>

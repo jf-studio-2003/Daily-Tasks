@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/><script src="./jquery.min.js">
+</script>
+<script language="JavaScript" type="text/javascript" src="./jsku.js"></script>
+<script language="JavaScript" type="text/javascript" src="./wen_zhang_ku.js"></script>
+
+<title>关于我们</title>
+<link href="./nh.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><style type="text/css">
+<!--
+body {
+	background-color: #F4F4F4;
+}
+-->
+</style>
+</head>
+
+<body>
+<div class="web">
+ <div class="nei_rong">
+  <div class="box_title">
+   <div id="title_html" class="css_title">关于我们</div>
+  </div>
+  <div class="box_text">
+   <div id="content_html" class="css_text">本人英语水平处于只认识ABC的程度，想深入学习而又没耐心。某天突发奇想，觉得中式英语有助于单词记忆，适合想大概看懂英文意思的人群的娱乐英语。想专业系统的学习英语备战考试的朋友请绕行。</div>
+  </div>
+  <span class="back_css" onClick="window.history.back()"><img src="jiantou.png" alt="&lt;"></span>   <!--返回按钮-->
+ </div><!--nei-rong-->
+ <div id="tabbar">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="an_niu">
+    <tr>
+      <td nowrap="nowrap"><a href="./index2.html">首页</a></td>
+      <td nowrap="nowrap"><a href="./review.html">练习</a></td>
+      <td nowrap="nowrap"><a href="./help.html"><div class="css_buttonr_bar">帮助</div></a></td>
+      <td nowrap="nowrap"><a href="./about.html">我的</a></td>
+    </tr>
+  </table>
+ </div>
+</div><!--web-->
+<script type="text/javascript">
+	var url_get=getQueryVariable("wz") //获取的是url中包含?的字符串
+	
+	xs("title_html").innerHTML = wen_zhang[url_get].标题;  // 将获取到的内容显示到DIV里。
+	
+	xs("content_html").innerHTML = wen_zhang[url_get].内容;  
+	
+	$(document).ready(function(){ //下滑弹出动画
+	$("#content_html").slideDown("fast");});
+</script>
+</body>
+</html>
